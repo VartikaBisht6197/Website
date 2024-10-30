@@ -1,13 +1,25 @@
-personal_website/
-├── index.html               # Homepage HTML
-├── hobbies.html             # Hobbies & Interests HTML
-├── background.html          # Personal Background HTML
-├── career.html              # Professional Career & Learning Path HTML
-├── assets/
-│   ├── css/
-│   │   ├── main.css         # Main CSS for general styles
-│   │   ├── hobbies.css      # Hobbies-specific CSS
-│   │   ├── background.css   # Background-specific CSS
-│   │   └── career.css       # Career-specific CSS
-│   └── images/              # Folder for images (placeholder for user-provided images)
-└── README.md                # Project Overview
+
+## 🌐 Pages Overview
+
+- **Homepage (`index.html`)**: The main landing page.
+- **Hobbies (`hobbies.html`)**: Highlights my hobbies and interests.
+- **Background (`background.html`)**: Shares personal background and story.
+- **Career (`career.html`)**: Details my professional journey and learning experiences.
+
+## 🎨 Styles
+
+Each page has a custom CSS file, ensuring a unique style while keeping a cohesive design throughout the site:
+
+- `main.css`: General styles applicable across all pages.
+- `hobbies.css`: Styles specific to the Hobbies page.
+- `background.css`: Styles specific to the Background page.
+- `career.css`: Styles specific to the Career page.
+
+## 🖼️ Assets
+
+The `assets/images/` folder is reserved for images used across the website. You can add images relevant to each page here.
+
+---
+
+**Feel free to explore each page to learn more about my journey and passions!**
+
