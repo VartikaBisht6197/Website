@@ -1,0 +1,21 @@
+
+body {
+    background-color: #f0f4f8;
+    color: #37474f;
+}
+
+header {
+    background-color: #78909c;
+    text-align: center;
+    padding: 15px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section h2 {
+    color: #37474f;
+    margin-top: 20px;
+}
