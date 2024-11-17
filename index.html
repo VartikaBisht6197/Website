@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Personal Website</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Vartika Bisht</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
@@ -18,56 +18,82 @@
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
+            background: #f7f8fc;
             color: #333;
-            background-color: #f5f5f5;
-            margin: 0;
         }
 
+        /* Header Styling */
         header {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: white;
-            padding: 20px 0;
+            background: linear-gradient(135deg, #003973, #E5E5BE);
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 60px 20px;
+            color: white;
+            position: relative;
+            overflow: hidden;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
+            font-weight: 700;
             margin-bottom: 10px;
+            color: #FFD700; /* Gold highlight for elegance */
+            animation: fadeInDown 1s ease-in-out;
         }
 
-        nav ul {
+        header nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
             gap: 20px;
+            margin-top: 20px;
         }
 
-        nav a {
+        header nav a {
             text-decoration: none;
             color: white;
             font-weight: bold;
-            transition: color 0.3s;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
-        nav a:hover {
-            color: #ffd700;
+        header nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
 
-        /* Section Styles */
+        .line-art {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: url('uploaded_image_path.png') no-repeat center;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        /* Section Styling */
         section {
             padding: 60px 20px;
+            background: white;
+        }
+
+        section:nth-child(even) {
+            background: linear-gradient(135deg, #EAF2F8, #ffffff); /* Subtle blue-gray gradient */
         }
 
         section h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-align: center;
             margin-bottom: 20px;
-            color: #6a11cb;
+            color: #003973;
         }
 
+        /* About Me Section */
         .about-me-container {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             gap: 40px;
@@ -88,6 +114,60 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             animation: fadeInUp 1s ease-in-out;
+        }
+
+        /* Social Feeds Section */
+        .social-feed {
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Styling */
+        footer {
+            background: linear-gradient(135deg, #003973, #002244); /* Deep navy gradient */
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        footer .quote {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        footer .author {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #bbb;
+        }
+
+        footer .line-art {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('uploaded_image_path.png') no-repeat center;
+            opacity: 0.05;
+            pointer-events: none;
         }
 
         /* Animations */
@@ -113,67 +193,80 @@
             }
         }
 
-        /* Footer Styles */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 20px;
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-me-container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>Welcome to My Professional Website</h1>
+        <h1>Vartika Bisht</h1>
         <nav>
             <ul>
-                <li><a href="hobbies.html">Hobbies & Interests</a></li>
-                <li><a href="background.html">Personal Background</a></li>
-                <li><a href="career.html">Professional Career & Learning Path</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="background.html">Background</a></li>
+                <li><a href="career.html">Career</a></li>
             </ul>
         </nav>
+        <div class="line-art"></div>
     </header>
 
-    <!-- Introduction Section -->
+    <!-- About Me Section -->
     <section>
-        <h2 data-aos="fade-up">About Me</h2>
+        <h2>About Me</h2>
         <div class="about-me-container">
             <p class="about-me-text" id="about-me-text">Loading...</p>
-            <img src="data/aboutme.jpg" alt="About Me Image" class="about-me-image" data-aos="fade-left">
+            <img src="data/aboutme.jpg" alt="About Me Image" class="about-me-image">
         </div>
     </section>
 
+    <!-- Social Feeds Section -->
+    <section>
+        <h2>Stay Connected</h2>
+        <div class="social-feed">
+            <!-- Instagram Feed -->
+            <iframe src="https://www.instagram.com/vartika.bisht/embed/" height="500" title="Instagram Feed"></iframe>
+            <!-- LinkedIn Feed -->
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6782251291927166976" height="741" title="LinkedIn Feed"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2024 My Personal Website. All rights reserved.</p>
+        <p>reachout.vartika@gmail.com</p>
+        <p class="quote">"I imagine Sisyphus happy"</p>
+        <p class="author">– Albert Camus</p>
+        <p>© 2024 Vartika Bisht. All rights reserved.</p>
     </footer>
 
-    <!-- AOS Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init(); // Initialize AOS animations
+        AOS.init();
 
-        // Fetch the text from the aboutme.txt file
+        // Load About Me text dynamically
         fetch('data/aboutme.txt')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok ' + response.statusText);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('about-me-text').textContent = data;
-            })
-            .catch(error => {
-                console.error('Error fetching the aboutme.txt:', error);
-                document.getElementById('about-me-text').textContent = 'Sorry, unable to load the about me content.';
-            });
+            .then(response => response.text())
+            .then(data => document.getElementById('about-me-text').textContent = data)
+            .catch(() => document.getElementById('about-me-text').textContent = 'Error loading content.');
     </script>
 </body>
 </html>
