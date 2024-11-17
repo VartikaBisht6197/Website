@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Styles for the About Me section */
+        .about-me-container {
+            display: flex;
+            align-items: center; /* Align text and image vertically */
+            gap: 20px; /* Add space between text and image */
+        }
+
+        .about-me-text {
+            flex: 1; /* Allow the text to take up remaining space */
+            font-size: 1.2rem; /* Adjust text size */
+        }
+
+        .about-me-image {
+            flex-shrink: 0; /* Prevent the image from shrinking */
+            max-height: 100%; /* Ensure the image matches the text height */
+            max-width: 200px; /* Optional: Set a maximum width for the image */
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -22,7 +41,29 @@
     <!-- Introduction Section -->
     <section>
         <h2>About Me</h2>
-        <p>This website serves as a digital footprint to showcase my journey, work, and interests.</p>
+        <div class="about-me-container">
+            <p class="about-me-text" id="about-me-text">Loading...</p>
+            <img src="data/aboutme.jpg" alt="About Me Image" class="about-me-image">
+        </div>
     </section>
+
+    <script>
+        // Fetch the text from the aboutme.txt file
+        fetch('data/aboutme.txt')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Insert the content into the paragraph
+                document.getElementById('about-me-text').textContent = data;
+            })
+            .catch(error => {
+                console.error('Error fetching the aboutme.txt:', error);
+                document.getElementById('about-me-text').textContent = 'Sorry, unable to load the about me content.';
+            });
+    </script>
 </body>
 </html>
