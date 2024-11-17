@@ -121,18 +121,31 @@
 
         /* Social Feeds Section */
         .social-feed {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 40px auto 0 auto;
             display: flex;
-            gap: 20px; /* Adding space between the feeds */
-            flex-wrap: wrap; /* Allows the items to wrap to the next line if necessary */
+            gap: 20px;
+            flex-wrap: wrap;  /* Ensures wrapping on smaller screens */
         }
+
         iframe {
             border: none;
-            width: calc(50% - 10px); /* Adjust width so frames are side by side */
+            width: 48%;  /* Set width of each iframe to 48% to fit side by side */
+            height: 500px;  /* Fix the height of the iframe */
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;  /* Hide any potential scrollbar */
+            object-fit: cover;  /* Maintain a consistent size and prevent stretching */
         }
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 768px) {
+            iframe {
+                width: 100%;  /* On smaller screens, make the iframes full-width */
+                height: 400px;  /* Adjust height for smaller screens */
+            }
+        }
+
 
 
         /* Footer Styling */
